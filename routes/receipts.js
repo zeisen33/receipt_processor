@@ -32,8 +32,10 @@ router.post('/process', function(req, res, next) {
 
 // returns number of points a receipt with id is worth and returns as JSON
 router.get('/:id/points', function(req, res, next) {
+    let points = 0
+    
     res.json({
-        message: 'points'
+        points
     })
 })
 
