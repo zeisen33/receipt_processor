@@ -59,13 +59,13 @@ const getPoints = (receipt) => {
     const points = retailerPoints + roundedTotalPoints + quarterTotalPoints 
                     + pointsPerTwoItems + descriptionPoints + datePoints + timePoints
     
-    console.log(`retailerPoints: ${retailerPoints}`)
-    console.log(`roundedTotalPoints: ${roundedTotalPoints}`)
-    console.log(`quarterTotalPoints: ${quarterTotalPoints}`)
-    console.log(`pointsPerTwoItems: ${pointsPerTwoItems}`)
-    console.log(`descriptionPoints: ${descriptionPoints}`)
-    console.log(`datePoints: ${datePoints}`)
-    console.log(`timePoints: ${timePoints}`)
+    // console.log(`retailerPoints: ${retailerPoints}`)
+    // console.log(`roundedTotalPoints: ${roundedTotalPoints}`)
+    // console.log(`quarterTotalPoints: ${quarterTotalPoints}`)
+    // console.log(`pointsPerTwoItems: ${pointsPerTwoItems}`)
+    // console.log(`descriptionPoints: ${descriptionPoints}`)
+    // console.log(`datePoints: ${datePoints}`)
+    // console.log(`timePoints: ${timePoints}`)
 
     
     return points

@@ -15,12 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')))    // serve the static f
 
 
 // Attach Express routers
-const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')     // update the import file path
 const receiptsRouter = require('./routes/receipts')
 
-app.use('/', indexRouter)
-app.use('/users', usersRouter)     // update the path
 app.use('/receipts', receiptsRouter)
 
 
