@@ -15,11 +15,9 @@ router.post('/process', function(req, res, next) {
     let id = crypto.randomBytes(32).toString('hex')
 
     // Check if it's already been used as an id, and redo if so
-    Object.entries(receipts).forEach(receipt => {
-        if (receipt.id === id) {
-            id = crypto.randomBytes(32).toString('hex')
-        }
-    })
+    while (Object.keys(receipts).includes(id)) {
+        id = crypto.randomBytes(32).toString('hex')
+    }
 
     // Add receipt to receipts hash (database in real scenario) with id as key
     receipts[id] = receipt
