@@ -28,8 +28,9 @@ const getPoints = (receipt) => {
 
     // 5 points for every two items
     let pointsPerTwoItems = 0
+    const pointsPerTwoMultiplier = 5
     const items = receipt.items
-    pointsPerTwoItems = 5 * Math.floor(items.length / 2)
+    pointsPerTwoItems = pointsPerTwoMultiplier * Math.floor(items.length / 2)
     
     // 0.2 * price points for each item that, when trimmed, has a num of chars with a multiple of 3
     let descriptionPoints = 0
@@ -55,6 +56,20 @@ const getPoints = (receipt) => {
     if (hour >= 14 && hour < 16) {
         timePoints = 10
     }
+
+    // 5 pts per item if all items are unique (Different desc and price)
+    // let uniquePoints = 0
+    // const uniquePointsMultiplier = 5
+    // // Loop through items with two indexes comparing those items
+    // for (let i = 0; i < items.length; i++) {
+    //     for (let j = 0; j < items.length; j++) {
+    //         if (i < j) {
+    //             console.log(items[i])
+    //             console.log(items[j])
+    //         }
+    //     }
+    // }
+
     
     const points = retailerPoints + roundedTotalPoints + quarterTotalPoints 
                     + pointsPerTwoItems + descriptionPoints + datePoints + timePoints
