@@ -1,4 +1,6 @@
 // FEEDBACK: Make this more modular by making each part of points its own function
+// Unique price/description could be iterative but would be very slow. Instead make a hash with keys of {price.concat(description)}
+// This would be very fast as only have to search a hash for a string
 
 const getPoints = (receipt) => {
     
