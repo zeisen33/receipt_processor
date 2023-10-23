@@ -1,3 +1,5 @@
+// FEEDBACK: Make this more modular
+
 const getPoints = (receipt) => {
     
     // One point per alphanumeric char in retailer name
