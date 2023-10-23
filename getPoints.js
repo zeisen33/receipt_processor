@@ -1,4 +1,4 @@
-// FEEDBACK: Make this more modular
+// FEEDBACK: Make this more modular by making each part of points its own function
 
 const getPoints = (receipt) => {
     
